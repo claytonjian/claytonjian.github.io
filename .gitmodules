@@ -1,0 +1,3 @@
+[submodule "LogicMazeGame"]
+	path = LogicMazeGame
+	url = https://github.com/claytonjian/LogicMazeGame.git
