@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Logic Maze Game</title>
+	</head>
+	<body>
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<script src="game.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="game_jquery.js"></script>
+		<div class = "game" id = "game">
+			<form action="game.js">
+
+				<label for="bSize">Size</label>
+				<input type="range" value = "6" name="bSize" id="bSize" min="4" max="8" step ="1" oninput="sizeSlider.value=bSize.value">
+				<output id="sizeSlider" name="sizeSlider">6</output>
+
+				<br>
+
+				<label for="bLayers">Layers</label>
+				<input type="range" value = "3" name="bLayers" id="bLayers" min="1" max="3" step ="1" oninput="layersSlider.value=bLayers.value">
+				<output id="layersSlider" name="layersSlider">3</output>
+
+				<input type="button" value="New Game" name="sizeButton" id="sizeButton" onclick="createBoard()">
+
+				<input type="button" value="Instructions" name="instructionsButton" id="instructionsButton" onclick="showInstructions()">
+			</form>
+			<div class ="instructions" id = "instructions">
+				<p>The object of the game is to traverse the board and try to hit as many tiles as you can. When you hit a tile, it will be marked purple, and available moves will be marked blue.<br><br>You can set how big your board is and how many layers you want your tiles to have with the sliders. Once you have clicked one tile the amount of times specified by the layer count, it is finished(you can no longer access it) and it will turn green. The goal is to get as close to creating a green board as you can. The layers goes as follows: red → orange → yellow → green</p>
+				<figure>
+					<img src="tile_images/tileLayers.jpg">
+					<figcaption>Layer Order</figcaption>
+				</figure>
+				<p>The available moves you can make are determined by the square you hit. For instance, if you hit a 1, you can then hit a tile that is 1 away from your tile. Hitting a 2 will let you hit tiles that are 2 away, and so on.</p>
+				<figure>
+					<img src="tile_images/twoMoves.jpg">
+					<figcaption>Example: available moves after hitting a 2</figcaption>
+				</figure>
+					
+				<p>There are also chess pieces in the game.<br>
+					Rooks must be followed by hitting an edge piece that is on the same column or row.
+					<figure>
+						<img src="tile_images/rookMoves.jpg">
+						<figcaption>Rook Moves</figcaption>
+					</figure>
+					<br>Bishops must be followed by hitting an edge piece that is in line diagonally with the bishop.
+					<figure>
+						<img src="tile_images/bishopMoves.jpg">
+						<figcaption>Bishop Moves</figcaption>
+					</figure>
+					<br>Knights must be followed by hitting a piece in an L direction (2 tiles in one direction, and 1 in the perpendicular direction).
+					<figure>
+						<img src="tile_images/knightMoves.jpg">
+						<figcaption>Knight Moves</figcaption>
+					</figure>
+					<br>Queens are a combination of a rook and a bishop(can hit edge pieces that are horizontally, vertically, or diagonally in line).
+					<figure>
+						<img src="tile_images/queenMoves.jpg">
+						<figcaption>Queen Moves</figcaption>
+					</figure>
+					<br>Once you have completed all the tiles in one layer, you will receive a wildcard on the last tile of that layer, which lets you pick any tile on the board when selected.
+					<figure>
+						<img src="tile_images/wildcard1.jpg">
+						<figcaption>Wildcard</figcaption>
+					</figure>
+				</p>
+			</div>
+			<div class ="tiles">
+				<section id="board">
+				</section>
+			</div>
+		</div>
+	</body>
+</html>

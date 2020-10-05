@@ -1,0 +1,113 @@
+body{
+	background-color: beige;
+}
+#board{
+	display: none;
+}
+#instructions{
+	display: none;
+}
+.tiles button{
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+	font-size: 0;
+	background-size: 100%;
+}
+.layer0{
+	background-image: url("tile_images/done.jpg");
+	font-size: 0;
+}
+.selected{
+	border: 5px solid purple;
+}
+.valid{
+	border: 5px solid blue;
+}
+
+.one1{
+	background-image: url("tile_images/one1.jpg");
+}
+.one2{
+	background-image: url("tile_images/one2.jpg");
+}
+.one3{
+	background-image: url("tile_images/one3.jpg");
+}
+
+.two1{
+	background-image: url("tile_images/two1.jpg");
+}
+.two2{
+	background-image: url("tile_images/two2.jpg");
+}
+.two3{
+	background-image: url("tile_images/two3.jpg");
+}
+
+.three1{
+	background-image: url("tile_images/three1.jpg");
+}
+.three2{
+	background-image: url("tile_images/three2.jpg");
+}
+.three3{
+	background-image: url("tile_images/three3.jpg");
+}
+
+.four1{
+	background-image: url("tile_images/four1.jpg");
+}
+.four2{
+	background-image: url("tile_images/four2.jpg");
+}
+.four3{
+	background-image: url("tile_images/four3.jpg");
+}
+
+.rook1{
+	background-image: url("tile_images/rook1.jpg");
+}
+.rook2{
+	background-image: url("tile_images/rook2.jpg");
+}
+.rook3{
+	background-image: url("tile_images/rook3.jpg");
+}
+
+.queen1{
+	background-image: url("tile_images/queen1.jpg");
+}
+.queen2{
+	background-image: url("tile_images/queen2.jpg");
+}
+.queen3{
+	background-image: url("tile_images/queen3.jpg");
+}
+
+.bishop1{
+	background-image: url("tile_images/bishop1.jpg");
+}
+.bishop2{
+	background-image: url("tile_images/bishop2.jpg");
+}
+.bishop3{
+	background-image: url("tile_images/bishop3.jpg");
+}
+
+.knight1{
+	background-image: url("tile_images/knight1.jpg");
+}
+.knight2{
+	background-image: url("tile_images/knight2.jpg");
+}
+.knight3{
+	background-image: url("tile_images/knight3.jpg");
+}
+
+.wildcard1{
+	background-image: url("tile_images/wildcard1.jpg");
+}
+.wildcard2{
+	background-image: url("tile_images/wildcard2.jpg");
+}
